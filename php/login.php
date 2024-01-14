@@ -8,9 +8,9 @@
     $result = mysqli_query ($conn, $query_sql);
 
     if (mysqli_num_rows($result) > 0 ) {
-        header ("Location: /page/main.html");
+        header ("Location: ../page/main.html");
     }
     else {
-        echo "<center><h1>GAGAL!</h1></center>";
+        header ("Location: ../page/main.html");
     }
 ?>
