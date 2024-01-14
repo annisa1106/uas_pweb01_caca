@@ -1,96 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Katalog Tas</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>My Login Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../ica/login.css">
 </head>
-<body>
-    <nav class="sidebar">
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="#produk">Produk</a></li>
-            <li><a href="#form">Kontak</a></li>
-        </ul>
-    </nav>
 
-    <main class="content">
-        <header>
-            <h1>Katalog Tas</h1>
-        </header>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="../img/2.jpeg" alt="logo">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Login</h4>
+							<form action="php/login.php" method="POST" class="my-login-validation" novalidate="">
+								<div class="form-group">
+									<label for="email">E-Mail Address</label>
+									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<div class="invalid-feedback">
+										Email is invalid
+									</div>
+								</div>
 
-        <section class="product-cards" id="produk">
-            <div class="product-card">
-                <img src="img/1.jpg" alt="Tas Model A">
-                <h2>Sling bag</h2>
-                <p>Sling bag atau yang biasa dikenal dengan tas selempang ini memiliki tali yang cukup panjang dengan ukuran bervariasi. </p>
-                <p class="price">$50</p>
-                <button type="submit"><a href="detail.html">Beli</a></button>
-            </div>
-            <div class="product-card">
-                <img src="img/2.jpeg" alt="Tas Model B">
-                <h2>Hand Bag</h2>
-                <p>Hand bag merupakan tas tangan yang biasa digunakan dengan cara menjinjingnya dan meletakkannya di lengan</p>
-                <p class="price">$60</p>
-                <button type="submit"><a href="detail.html">Beli</a></button>
-            </div>
-            <div class="product-card">
-                <img src="img/3.jpg" alt="Tas Model B">
-                <h2>Shoulder Bag</h2>
-                <p>Sesuai dengan namanya, kamu dapat menggunakan shoulder bag pada salah satu sisi bahu.</p>
-                <p class="price">$60</p>
-                <button type="submit"><a href="detail.html">Beli</a></button>
-            </div>
-            <div class="product-card">
-                <img src="img/4.jpg" alt="Tas Model B">
-                <h2>Clutch Bag</h2>
-                <p>Model tas berikutnya adalah clutch. Kamu dapat menggunakan model tas satu ini untuk pergi ke pesta atau acara formal lainnya. </p>
-                <p class="price">$60</p>
-                <button type="submit"><a href="detail.html">Beli</a></button>
-            </div>
-            <div class="product-card">
-                <img src="img/5.jpg" alt="Tas Model B">
-                <h2>Tas Ransel</h2>
-                <p>Pasti kamu sudah tidak asing dengan model tas satu ini, bukan? Tas ini memiliki bentuk seperti ransel sekolah kamu dulu, tetapi ukurannya lebih kecil. </p>
-                <p class="price">$60</p>
-                <button type="submit"><a href="detail.html">Beli</a></button>
-            </div>
-            <div class="product-card">
-                <img src="img/6.jpeg" alt="Tas Model B">
-                <h2>Tas Bucket</h2>
-                <p>Tidak heran kalau tas ini diberi nama bucket bag karena bentuknya memang menyerupai keranjang atau ember. </p>
-                <p class="price">$60</p>
-                <button type="submit"><a href="detail.html">Beli</a></button>
-            </div>
+								<div class="form-group">
+									<label for="password">Password
+										<a href="forgot.html" class="float-right">
+											Forgot Password?
+										</a>
+									</label>
+									<input id="password" type="password" class="form-control" name="password" required data-eye>
+										<div class="invalid-feedback">
+											Password is required
+										</div>
+								</div>
 
-            <div class="container" >
-                <h1>Formulir Pemesanan Tas</h1>
-                <form class="order-form" id="form">
-                    <label for="name">Nama Anda:</label>
-                    <input type="text" id="name" name="name" required>
-        
-                    <label for="email">Email Anda:</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <label for="address">Alamat Pengiriman:</label>
-                    <textarea id="address" name="address" rows="4" required></textarea>
-        
-                    <label for="quantity">Jumlah Tas yang Dipesan:</label>
-                    <input type="number" id="quantity" name="quantity" required>
-        
-                    <button type="submit">Pesan</button>
-                </form>
-            </div>
+								<div class="form-group">
+									<div class="custom-checkbox custom-control">
+										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
+										<label for="remember" class="custom-control-label">Remember Me</label>
+									</div>
+								</div>
 
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; Anisa Dava Islami | 2041053</p>
-            <p>&copy; 2023 Bag Shop. All rights reserved.</p>
-        </div>
-    </footer>
+								<div class="form-group m-0">
+									<button type="submit" class="btn btn-primary btn-block">
+										Login
+									</button>
+								</div>
+								<div class="mt-4 text-center">
+									Don't have an account? <a href="register.html">Create One</a>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+						&#169; 22041053 Annisa Dava Islami.  
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
